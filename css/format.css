@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+header {
+    width: 100vw;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title::before {
+    content: "";
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin-right: 16px;
+    background-image: url("/img/hikari.png");
+    background-size: contain;
+}
+
+.title {
+    text-align: center;
+    padding-left: 64px;
+}
+
+.mainSubject {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.rubySubject {
+    font-size: 16px;
+    font-family: "Kalam", cursive;
+}
+
+nav {
+    width: 0;
+    color: #FFFFFF;
+    background-color: #555555;
+    visibility: hidden;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+}
+
+main {
+    width: 100vw;
+    height: calc(100vh - 96px);
+    position: fixed;
+    top: 80px;
+    left: 0;
+    overflow-y: scroll;
+}
+
+img {
+    width: 100%;
+}
+
+article {
+    width: 96%;
+    margin: 0 auto 32px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section {
+    width: 100%;
+    margin-bottom: 2ex;
+}
+
+section h2 {
+    margin-bottom: 1ex;
+    padding: 1ex;
+}
+
+section h3 {
+    padding: 0.5ex 1ex;
+}
+
+.indent {
+    margin-left: 2ex;
+}
+
+section ul {
+    margin-left: 5ex;
+}
+
+.tile {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.tile .tileImg {
+    position: relative;
+    width: 25%;
+}
+
+.tile .tileImg:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.tile .tileImg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    object-fit: cover;
+}
+
+.circle::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.circle {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.date {
+    width: 15ex;
+}
+
+.div1-2s {
+    width: 46%;
+}
+
+.div1-3s {
+    width: 30%;
+}
+
+.div2-3s {
+    width: 60%;
+}
+
+.youtube {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.youtube iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    position: fixed;
+    width: 100vw;
+    height: 16px;
+    top: calc(100vh - 16px);
+    left: 0;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (min-width:768px) {
+    .div1-2 {
+        width: 46%;
+    }
+    .div1-3 {
+        width: 30%;
+    }
+    .div2-3 {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    nav {
+        width: 250px;
+        height: calc(100vh - 80px);
+        position: fixed;
+        top: 80px;
+        left: calc(100vw - 250px);
+        visibility: visible;
+    }
+    #menuBtn {
+        display: none;
+    }
+    main {
+        width: calc(100vw - 250px);
+    }
+    article {
+        max-width: 1024px;
+    }
+}
