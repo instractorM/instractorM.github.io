@@ -52,7 +52,17 @@ nav {
     color: #FFFFFF;
     background-color: #555555;
     visibility: hidden;
+    overflow-y: scroll;
+    /* IE, Edge 対応 */
+    -ms-overflow-style: none;
+    /* Firefox 対応 */
+    scrollbar-width: none;
     z-index: 10;
+}
+
+nav::-webkit-scrollbar {
+    /* Chrome, Safari 対応 */
+    display: none;
 }
 
 nav ul {
