@@ -84,6 +84,7 @@ img {
 
 article {
     width: 100%;
+    height: 0;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -91,7 +92,7 @@ article {
 }
 
 section {
-    width: 100%;
+    width: 96%;
     margin: 0 auto 1ex auto;
 }
 
@@ -148,7 +149,8 @@ section ul {
 }
 
 .date {
-    width: 15ex;
+    display: inline-block;
+    width: 12ex;
 }
 
 .div1-2s {
@@ -175,6 +177,11 @@ section ul {
     right: 0;
     width: 100%;
     height: 100%;
+}
+
+.hidden {
+    height: 0;
+    visibility: hidden;
 }
 
 footer {
