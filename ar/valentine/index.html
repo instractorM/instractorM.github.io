@@ -14,10 +14,18 @@
 
 <body style="margin : 0px; overflow: hidden">
     <script>
-        const sceneEl = document.querySelector('a-scene');
-        sceneEl.addEventListener('loaded', () => {
-            sceneEl.camera = new THREE.PerspectiveCamera();
-        });
+        var lastGeometry = new THREE.PlaneGeometry(8, 5.5);
+        var lastMesh = new THREE.Mesh(
+            lastGeometry,
+            new THREE.MeshBasicMaterial({
+                map: lastTexture,
+            })
+        );
+        lastMesh.position.set(0.3, -0.5, 1.2);
+        lastMesh.rotation.x = -Math.PI / 2;
+        // 以前はこのように、rotaionの後にposition.setを呼んでいたのでちらついた
+        // lastMesh.position.set (0.3, -0.5, 1.2);
+        markerRoot9.add(lastMesh);
     </script>
     <!-- AR.jsのデバックとA-FrameのVRボタンを非表示 -->
     <a-scene embedded arjs="debugUIEnabled: false; " vr-mode-ui="enabled: false">
