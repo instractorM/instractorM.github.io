@@ -184,6 +184,27 @@ section ul {
     visibility: hidden;
 }
 
+.textCenter {
+    text-align: center;
+}
+
+.fontSmall {
+    font-size: 12px;
+}
+
+.banner {
+    width: 100%;
+    height: 48px;
+    background-color: gray;
+}
+
+.banner a {
+    width: calc(100% - 2ex);
+    height: 100%;
+    padding: 0 1ex;
+    color: #FFFFFF;
+}
+
 footer {
     position: fixed;
     width: 100vw;
